@@ -4,4 +4,9 @@ model_download文件是用于模型下载，[具体方法参考](https://blog.cs
 lora_hate_recognition是用lora微调训练的文件，
 run.py是模型运行文件
 Evaluation_lora_recognition.py是一个评估文件，
-json_to_txt.py是格式转换，将输出的json文件转换成txt
+json_to_txt.py是格式转换，将输出的json文件转换成txt，
+具体运行说明如下：
+首先通过modeldownload文件下载一个你喜欢的模型，会自动创建一个根目录dataroot，里面会有你下载的模型；然后在终端运行lora文件，可以修改其中的参数和文件路径等，会训练出一个新的目录，里面是lora模型；
+然后终端运行run.py，就会根据你输入的测试集输出仇恨识别结果了。json文件的话不用改格式，想要txt文件在运行一下json to txt，就能改成txt格式。
+github只让上传25MB以下的文件，原始模型和训练模型都没法上传进来，各位大佬可以参考一下我的方法，自己训练一下，我用的4090显卡，1.7b模型训练两个小时左右，0.6b不到半个小时就可以了，运行的时候输入两千条再输出
+也得二十多分钟，可能我确实不是专业做深度学习的hhhhh。
